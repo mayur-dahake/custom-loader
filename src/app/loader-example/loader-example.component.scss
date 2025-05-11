@@ -1,25 +1,42 @@
+/* loader-showcase.component.scss */
+.accordion-container {
+  margin: 1rem;
+}
 
-.content {
-  padding: 2rem;
+.accordion-group {
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.accordion-header {
+  background: #f4f4f4;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: bold;
+  max-height: 30px;
+  align-items: center;
+}
+
+.accordion-content {
+  padding: 1rem;
+  background: #fff;
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 2rem;
-  justify-items: center;
-  align-items: center;
+  gap: 1.5rem;
 }
 
-.loader {
+.loader-item {
+  text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 1rem;
-
-  h4 {
-    font-size: 0.85rem;
-    text-align: center;
-    word-break: break-word;
-  }
+  gap: 10px ;
 }
