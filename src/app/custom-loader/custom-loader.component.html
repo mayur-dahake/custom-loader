@@ -1,0 +1,41 @@
+<!-- <div class="loader-container" [class.fullscreen]="fullscreen">
+  <ng-container [ngSwitch]="type">
+    <div *ngSwitchCase="'spinner-cutout'" class="spinner-cutout"></div>
+    <div *ngSwitchCase="'spinner-border'" class="spinner-border"></div>
+    <div *ngSwitchCase="'spinner-multiring'" class="spinner-multiring"></div>
+    <div *ngSwitchCase="'spinner-rotating-dot'" class="spinner-rotating-dot"></div>
+    <div *ngSwitchCase="'spinner-segmented-ring'" class="spinner-segmented-ring"></div>
+    <div *ngSwitchCase="'spinner-angled-arc'" class="spinner-angled-arc"></div>
+    <div *ngSwitchCase="'spinner-nested-circle'" class="spinner-nested-circle"></div>
+    <div *ngSwitchCase="'dots'" class="dots">
+      <span></span><span></span><span></span>
+    </div>
+    <div *ngSwitchCase="'bar'" class="bar-loader"></div>
+    <div *ngSwitchCase="'pulse'" class="pulse-loader"></div>
+    <div *ngSwitchDefault class="loader"></div>
+  </ng-container>
+</div> -->
+
+<!-- loader.component.html -->
+<div class="loader-container" >
+  <ng-container *ngIf="hasTemplate(type); else defaultLoader">
+    <ng-container *ngTemplateOutlet="loaderTemplateMap[type]"></ng-container>
+  </ng-container>
+
+  <ng-template #defaultLoader>
+    <div [ngClass]="['loader', type]"></div>
+  </ng-template>
+
+  <!-- Templates for complex loaders -->
+  <ng-template #dots>
+    <div class="dots"><span></span><span></span><span></span></div>
+  </ng-template>
+
+  <ng-template #bar>
+    <div class="bar-loader"></div>
+  </ng-template>
+
+  <ng-template #pulse>
+    <div class="pulse-loader"></div>
+  </ng-template>
+</div>
