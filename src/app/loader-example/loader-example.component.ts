@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoaderType } from '../loader-type';
 
 @Component({
   selector: 'app-loader-example',
@@ -7,11 +8,16 @@ import { Component } from '@angular/core';
   styleUrl: './loader-example.component.scss'
 })
 export class LoaderExampleComponent {
- isLoading = true;
 
-  ngOnInit() {
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 3000); // simulate loading
-  }
+loaders: LoaderType[] = [
+    'spinner-cutout',
+    'spinner-border',
+    'spinner-multiring',
+    'spinner-rotating-dot',
+    'spinner-segmented-ring',
+    'spinner-angled-arc',
+    'spinner-nested-circle'
+
+    // ... add more as needed
+  ];
 }

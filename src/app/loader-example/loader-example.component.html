@@ -1,73 +1,8 @@
 <div class="content">
   <div class="grid-container">
-    <div class="loader">
-      <app-custom-loader type="spinner-cutout"></app-custom-loader>
-      <h4>spinner-cutout</h4>
-    </div>
-
-    <div class="loader">
-      <app-custom-loader type="spinner-border"></app-custom-loader>
-      <h4>spinner-border</h4>
-    </div>
-
-    <div class="loader">
-      <app-custom-loader type="spinner-multiring"></app-custom-loader>
-      <h4>spinner-multiring</h4>
-    </div>
-
-    <div class="loader">
-      <app-custom-loader type="spinner-rotating-dot"></app-custom-loader>
-      <h4>spinner-rotating-dot</h4>
-    </div>
-
-    <div class="loader">
-      <app-custom-loader type="spinner-segmented-ring"></app-custom-loader>
-      <h4>spinner-segmented-ring</h4>
-    </div>
-
-    <div class="loader">
-      <app-custom-loader type="spinner-angled-arc"></app-custom-loader>
-      <h4>spinner-angled-arc</h4>
-    </div>
-
-    <div class="loader">
-      <app-custom-loader type="spinner-nested-circle"></app-custom-loader>
-      <h4>spinner-nested-circle</h4>
-    </div>
-
-    <div class="loader">
-      <app-custom-loader type="spinner-border"></app-custom-loader>
-      <h4>spinner-border</h4>
-    </div>
-    <div class="loader">
-      <app-custom-loader type="spinner-multiring"></app-custom-loader>
-      <h4>spinner-multiring</h4>
-    </div>
-
-    <div class="loader">
-      <app-custom-loader type="spinner-cutout"></app-custom-loader>
-      <h4>spinner-cutout</h4>
-    </div>
-    <div class="loader">
-      <app-custom-loader type="spinner-border"></app-custom-loader>
-      <h4>spinner-border</h4>
-    </div>
-    <div class="loader">
-      <app-custom-loader type="spinner-multiring"></app-custom-loader>
-      <h4>spinner-multiring</h4>
-    </div>
-
-    <div class="loader">
-      <app-custom-loader type="spinner-cutout"></app-custom-loader>
-      <h4>spinner-cutout</h4>
-    </div>
-    <div class="loader">
-      <app-custom-loader type="spinner-border"></app-custom-loader>
-      <h4>spinner-border</h4>
-    </div>
-    <div class="loader">
-      <app-custom-loader type="spinner-multiring"></app-custom-loader>
-      <h4>spinner-multiring</h4>
+    <div class="loader" *ngFor="let loader of loaders">
+      <app-custom-loader [type]="loader"></app-custom-loader>
+      <h4>{{ loader }}</h4>
     </div>
   </div>
 </div>
