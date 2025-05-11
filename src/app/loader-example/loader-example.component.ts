@@ -16,7 +16,12 @@ loaders: LoaderType[] = [
     'spinner-rotating-dot',
     'spinner-segmented-ring',
     'spinner-angled-arc',
-    'spinner-nested-circle'
+    'spinner-nested-circle',
+    'spinner-orbiting-dot',
+    'spinner-gear',
+    'spinner-stepped-wheel',
+    'spinner-rotating-matrix',
+    'spinner-circular-fade',
 
     // ... add more as needed
   ];
