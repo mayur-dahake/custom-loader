@@ -1,18 +1,34 @@
-<!-- loader-showcase.component.html -->
-<div class="accordion-container">
-  <div class="accordion-group" *ngFor="let group of loaderGroups">
-    <div class="accordion-header" (click)="toggleAccordion(group)">
-      <h3>{{ group.name }}</h3>
-      <span class="arrow">{{ group.open ? "▲" : "▼" }}</span>
-    </div>
+<div class="loader-container">
+  <div class="loader-header">
+    <h1>MDEVHUB Loaders</h1>
+  </div>
+  <div class="loader-body">
+    <div class="accordion-panel">
+      <div class="accordion-group" *ngFor="let group of loaderGroups">
+        <div class="accordion-header" (click)="toggleAccordion(group)">
+          <h3>{{ group.name }}</h3>
+          <span class="arrow">{{ group.open ? "▲" : "▼" }}</span>
+        </div>
 
-    <div class="accordion-content" *ngIf="group.open">
-      <div class="grid-container">
-        <div class="loader-item" *ngFor="let loader of group.loaders">
-          <app-custom-loader [type]="loader"></app-custom-loader>
-          <p>{{ loader }}</p>
+        <div class="accordion-content" *ngIf="group.open">
+          <div class="grid-container">
+            <div class="loader-item" *ngFor="let loader of group.loaders">
+              <app-custom-loader [type]="loader"></app-custom-loader>
+              <p>{{ loader }}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
+    <div class="loader-configurations">
+      <div class="configurator-header">
+        <h3>Loader Configurations</h3>
+      </div>
+      <div class="configurator-content"></div>
+    </div>
+  </div>
+  <div class="loader-footer">
+    <p>© 2025 MDEVHUB. All rights reserved.</p>
   </div>
 </div>

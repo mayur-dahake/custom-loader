@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { LoaderType } from '../loader-type';
 
 @Component({
   selector: 'app-loader-example',
@@ -8,23 +7,6 @@ import { LoaderType } from '../loader-type';
   styleUrl: './loader-example.component.scss',
 })
 export class LoaderExampleComponent {
-  loaders: LoaderType[] = [
-    'spinner-cutout',
-    'spinner-border',
-    'spinner-multiring',
-    'spinner-rotating-dot',
-    'spinner-segmented-ring',
-    'spinner-angled-arc',
-    'spinner-nested-circle',
-    'spinner-orbiting-dot',
-    'spinner-gear',
-    'spinner-stepped-wheel',
-    'spinner-rotating-matrix',
-    'spinner-circular-fade',
-
-    // ... add more as needed
-  ];
-
   loaderGroups = [
     {
       name: 'Spinners',
@@ -45,17 +27,24 @@ export class LoaderExampleComponent {
       ],
     },
     {
+      name: 'Classic',
+      open: false,
+      loaders: [
+        'text-fading',
+        'text-underline-progress',
+        'text-typewriter',
+        'text-full-typewriter',
+        'text-gradient',
+        'text-scanner',
+      ],
+    },
+    {
       name: 'Progress Bars',
       open: false,
       loaders: ['bar', 'pulse'],
     },
     {
       name: 'Dots',
-      open: false,
-      loaders: ['dots'],
-    },
-    {
-      name: 'Classic',
       open: false,
       loaders: ['dots'],
     },
