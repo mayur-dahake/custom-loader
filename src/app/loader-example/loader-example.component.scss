@@ -1,11 +1,11 @@
 .loader-container {
   display: flex;
-  flex-direction: column; /* Ensure header, body, and footer are in column */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: auto;
   padding: 20px;
-  height: 100%;
+  height: 100vh;
 
   .loader-header {
     font-size: 12px;
@@ -17,10 +17,10 @@
   .loader-body {
     width: 100%;
     display: flex;
-    flex-direction: row; /* Change to column to stack accordion panels */
+    flex-direction: row;
     gap: 20px;
-    height: 100%; /* Full height to fit content */
-    overflow-y: auto; /* Allow scrolling if content overflows */
+    height: 100%;
+    overflow-y: auto;
 
     .accordion-panel {
       width: 70%;
@@ -56,6 +56,14 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
             gap: 1.5rem;
+
+            .loader-item {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              gap: 10px;
+            }
           }
         }
       }
@@ -73,11 +81,26 @@
         background: #f4f4f4;
         padding: 10px 20px;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         cursor: pointer;
         font-weight: bold;
         align-items: center;
         max-height: 30px;
+      }
+
+      .configurator-content {
+        padding: 10px;
+
+        .configurator-item {
+          margin-bottom: 1.5rem;
+          width: 150px;
+
+          .loader-type-field {
+            width: 100%;
+            text-align: center;
+            justify-items: center;
+          }
+        }
       }
     }
   }

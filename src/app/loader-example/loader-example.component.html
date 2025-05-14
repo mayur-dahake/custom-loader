@@ -25,7 +25,50 @@
       <div class="configurator-header">
         <h3>Loader Configurations</h3>
       </div>
-      <div class="configurator-content"></div>
+      <div class="configurator-content">
+        <div class="configurator-item">
+          <mat-form-field appearance="fill" class="loader-type-field">
+            <mat-label>Loader Type</mat-label>
+            <input
+              matInput
+              type="text"
+              id="loaderType"
+              placeholder="Search loader"
+              aria-label="Loader"
+              [formControl]="loaderControl"
+              [matAutocomplete]="auto"
+            />
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option
+                *ngFor="let option of filteredLoaders | async"
+                [value]="option"
+              >
+                {{ option }}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </div>
+        <div class="configurator-item">
+          <mat-form-field appearance="fill" class="loader-color-field">
+            <mat-label>Loader Color</mat-label>
+            <input
+              matInput
+              type="color"
+              [value]="loaderColor"
+              (input)="onColorChange($event)"
+              aria-label="Loader Color"
+            />
+          </mat-form-field>
+        </div>
+        <!-- <div class="configurator-item">
+          <label for="loaderSize">Loader Size:</label>
+          <input type="number" id="loaderSize" [(ngModel)]="loaderSize" />
+        </div>
+        <div class="configurator-item">
+          <label for="loaderColor">Loader Color:</label>
+          <input type="color" id="loaderColor" [(ngModel)]="loaderColor" />
+        </div> -->
+      </div>
     </div>
   </div>
   <div class="loader-footer">
