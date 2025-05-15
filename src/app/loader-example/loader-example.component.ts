@@ -12,7 +12,7 @@ export class LoaderExampleComponent {
   loaderGroups = [
     {
       name: 'Spinners',
-      open: true,
+      open: false,
       loaders: [
         'spinner-cutout',
         'spinner-border',
@@ -47,8 +47,17 @@ export class LoaderExampleComponent {
     },
     {
       name: 'Dots',
-      open: false,
-      loaders: ['dots'],
+      open: true,
+      loaders: [
+        'dot-reveal',
+        'dot-progress',
+        'dot-wave',
+        'dot-pulse',
+        'dot-swap',
+        'dot-train',
+        'dot-bouncing-pass',
+        'dot-rotating',
+      ],
     },
   ];
 
